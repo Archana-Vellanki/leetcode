@@ -55,16 +55,17 @@
 
 class Solution(object):
     def peakIndexInMountainArray(self, mountain_arr, length):
+        # Corner cases: [1,2,3], [3,2,1], [1,3,2], [2,3,2], [2,3,1], [9,3,2,1], [1,2,3,4]
         left = 0
         right = length - 1
 
-        while left < right - 1:
+        while left < right:
             mid = (left+right)//2
             mid_element = mountain_arr.get(mid)
-            pre_mid = mountain_arr.get(mid - 1)
+            post_mid = mountain_arr.get(mid + 1)
 
-            if pre_mid < mid_element:
-                left = mid
+            if mid_element < post_mid:
+                left = mid + 1
             else:
                 right = mid
 
