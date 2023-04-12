@@ -31,6 +31,14 @@
 # s and wordDict[i] consist of only lowercase English letters.
 # All the strings of wordDict are unique.
 
+# Time complexity: O(N^2)
+# Space complexity: O(N)
+
+# Iterate through all the indices of the string
+# Check if the substring from 0 to the index is a valid word
+# if it is a valid word, check the substring from the index to the end recursively
+# Use memoization to store the result of substrings found to avoid re-computation.
+
 class Solution(object):
     def wordBreak(self, s, wordDict):
         """
@@ -38,20 +46,27 @@ class Solution(object):
         :type wordDict: List[str]
         :rtype: bool
         """
-        # Time complexity: O(N^2)
+        # Memoization dictionary to store the results for substrings
         wordsFound = {}
         return self.helper(s, wordDict, wordsFound)
 
     def helper(self, s, wordDict, wordsFound):
+        # if s is already explored return the result that is stored
         if s in wordsFound:
             return wordsFound[s]
+
+        # if s is empty return True since it is the base case
         if not s:
             return True
 
+        # check if the current prefix s[:right] is a valid word
+        # recursively check if the remaining suffix can be segmented into words
         for right in range(1, len(s) + 1):
             if s[:right] in wordDict and self.helper(s[right:], wordDict, wordsFound):
+                # store the result for this substring and return True
                 wordsFound[s] = True
                 return True
+        # store the result for this substring and return False
         wordsFound[s] = False
         return False
 
