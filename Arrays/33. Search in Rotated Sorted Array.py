@@ -32,55 +32,103 @@
 # nums is an ascending array that is possibly rotated.
 # -104 <= target <= 104
 
+
+# Time complexity: O(logN)
+# Space complexity: O(1)
+
+# Approach: Find the position of the minimum element in the rotated sorted array.
+# check if the element is between the 0 index and index of minimum element or in between the index of minimum element and the last element
+# perform binary search accordingly
 class Solution(object):
-    def find_pivot(self, nums):
-        length = len(nums)
-        l = 0
-        r = length - 1
-
-        if nums[l] < nums[r]:
-            return -1
-
-        while l < r:
-            mid = (l+r)//2
-            if nums[mid] > nums[mid+1]:
-                return mid
-            else:
-                if nums[0] < nums[mid]:
-                    l = mid
-                else:
-                    r = mid
-        return r
-
-    def binarySearch(self, left, right, nums, target):
-        while left <= right:
-            mid = (left + right)//2
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] < target:
-                left = mid + 1
-            else:
-                right = mid - 1
-        return -1
-
     def search(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: int
         """
-        length = len(nums)
-
-        pivot = self.find_pivot(nums)
-
-        if pivot == -1:
-            return self.binarySearch(0, length - 1, nums, target)
-        if target > nums[pivot]:
+        mini = self.pivot(nums)
+        if target < nums[mini]:
             return -1
-        if target == nums[pivot]:
-            return pivot
-
-        if target >= nums[0]:
-            return self.binarySearch(0, pivot, nums, target)
+        elif target == nums[mini]:
+            return mini
         else:
-            return self.binarySearch(pivot+1, length - 1,  nums, target)
+            left = 0 if target >= nums[0] else mini
+            right = len(nums) - 1 if target <= nums[-1] else mini
+            while left <= right:
+                mid = (left + right)//2
+                if target < nums[mid]:
+                    right = mid - 1
+                elif target > nums[mid]:
+                    left = mid + 1
+                else:
+                    return mid
+            return -1
+
+    def pivot(self, nums):
+        left = 0
+        right = len(nums) - 1
+
+        while left < right:
+            mid = (left + right)//2
+            if nums[left] < nums[right]:
+                return left
+            else:
+                if nums[mid] > nums[right]:
+                    left = mid + 1
+                else:
+                    right = mid
+        return left
+
+
+# class Solution(object):
+#     def find_pivot(self, nums):
+#         length = len(nums)
+#         l = 0
+#         r = length - 1
+
+#         if nums[l] < nums[r]:
+#             return -1
+
+#         while l < r:
+#             mid = (l+r)//2
+#             if nums[mid] > nums[mid+1]:
+#                 return mid
+#             else:
+#                 if nums[0] < nums[mid]:
+#                     l = mid
+#                 else:
+#                     r = mid
+#         return r
+
+#     def binarySearch(self, left, right, nums, target):
+#         while left <= right:
+#             mid = (left + right)//2
+#             if nums[mid] == target:
+#                 return mid
+#             elif nums[mid] < target:
+#                 left = mid + 1
+#             else:
+#                 right = mid - 1
+#         return -1
+
+#     def search(self, nums, target):
+#         """
+#         :type nums: List[int]
+#         :type target: int
+#         :rtype: int
+#         """
+#         length = len(nums)
+
+#         pivot = self.find_pivot(nums)
+
+#         if pivot == -1:
+#             return self.binarySearch(0, length - 1, nums, target)
+#         if target > nums[pivot]:
+#             return -1
+#         if target == nums[pivot]:
+#             return pivot
+
+#         if target >= nums[0]:
+#             return self.binarySearch(0, pivot, nums, target)
+#         else:
+#             return self.binarySearch(pivot+1, length - 1,  nums, target)
