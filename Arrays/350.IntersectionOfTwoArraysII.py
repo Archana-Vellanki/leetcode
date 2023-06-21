@@ -65,3 +65,25 @@ class Solution(object):
 # Another way to solve this problem is to sort both arrays and then use two pointers to iterate through them.
 # If the elements at the two pointers are equal, add the element to the result array and increment both pointers.
 # Otherwise, increment the pointer of the array with the smaller element.
+class Solution(object):
+    def intersect(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        len1, len2 = len(nums1), len(nums2)
+        ans = []
+        i, j = 0, 0
+        nums1.sort()
+        nums2.sort()
+        while i < len1 and j < len2:
+            if nums1[i] == nums2[j]:
+                ans.append(nums1[i])
+                i += 1
+                j += 1
+            elif nums1[i] < nums2[j]:
+                i += 1
+            else:
+                j += 1
+        return ans

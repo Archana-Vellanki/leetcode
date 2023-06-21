@@ -34,7 +34,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        # Time complexity: O(2*N) ~ O(N)
+        # Time complexity: O(N)
         # Space Complexity: O(1)
         length = len(nums)
         count = {0: 0, 1: 0, 2: 0}
