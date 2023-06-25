@@ -62,3 +62,51 @@ class Solution(object):
             else:
                 r = mid
         return l
+
+# Time complexity: O(logN)
+# Space complexity: O(1)
+# Approach: Compare the middle element with its neighbour, find if its the decreasing part or increasing part and modify the bounds accordingly.
+
+
+class Solution(object):
+    def peakIndexInMountainArray(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: int
+        """
+        length = len(arr)
+        l = 0
+        r = length - 1
+
+        while l < r:
+            mid = (l+r)//2
+            if arr[mid] < arr[mid + 1]:
+                l = mid+1
+            else:
+                r = mid
+        return l
+
+# lengthy but trivial approach
+# class Solution(object):
+#     def peakIndexInMountainArray(self, arr):
+#         """
+#         :type arr: List[int]
+#         :rtype: int
+#         """
+#         length = len(arr)
+#         l = 0
+#         r = length - 1
+
+#         while l < r:
+#             mid = (l + r)//2
+#             if mid > 0:
+#                 if arr[mid - 1] < arr[mid]:
+#                     l = mid
+#                 else:
+#                     r = mid
+#             if mid < length - 1:
+#                 if arr[mid] > arr[mid + 1]:
+#                     r = mid
+#                 else:
+#                     l = mid
+#         return r

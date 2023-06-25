@@ -93,5 +93,8 @@ class Solution(object):
                 j -= 1
             k -= 1
 
-        # Append any remaining elements from nums2 to nums1
+        # Exits only when either of i or j is less than zero
+        # if nums1 has left out elements(i > 0 and j < 0): all the elements are less than those of nums2 and hence are in place
+        # if nums2 has left out elements (j > 0 and i < 0): all the nums1 initial elements are to be replaced with the elements in nums2.
+        # Hence Append any remaining elements from nums2 to nums1.
         nums1[:j+1] = nums2[:j+1]
