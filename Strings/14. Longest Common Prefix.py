@@ -23,6 +23,15 @@
 # strs[i] consists of only lowercase English letters.
 
 
+# Time complexity: O(m*n)
+# Space complexity: O(m)
+# m is the shortest string
+# n is the number of strings
+# Approach: find the length of the shortest string so that we can iterate only until that index.
+# Iterate from the beginning of each string, to see if the character (of all strings )at a given index  is the same.
+# If it is same, then it is valid prefix character hence append to the result.
+# If not, return the prefix found till now.
+
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -31,20 +40,14 @@ class Solution(object):
         """
         i = 0
         prefix = []
-        nStrings = len(strs)
         ch = ''
-        flag = True
-        while flag:
-            if i < len(strs[0]):
-                ch = strs[0][i]
-            else:
-                break
+        minLength = min([len(each) for each in strs])
+
+        while i < minLength:
+            ch = strs[0][i]
             for each in strs:
-                if i >= len(each) or each[i] != ch:
-                    flag = False
-                    break
-            if flag:
-                prefix.append(ch)
+                if each[i] != ch:
+                    return ''.join(prefix)
+            prefix.append(ch)
             i += 1
-        # print(prefix)
         return ''.join(prefix)

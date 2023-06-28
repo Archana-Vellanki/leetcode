@@ -53,6 +53,58 @@
 #        :rtype int
 #        """
 
+
+# Time complexity: O(logn)
+# Space complexity: O(1)
+
+# Approach: find the peak index of mountain array. binary search in the left half first.
+# if target is not found in the left side of the peak, binary search in the right part of the peak.
+
+
+class Solution(object):
+    def findPeakIndex(self, arr):
+        l = 0
+        r = arr.length() - 1
+        while l < r:
+            mid = (l + r)//2
+            if arr.get(mid) <= arr.get(mid+1):
+                l = mid+1
+            else:
+                r = mid
+        return r
+
+    def binarySearch(self, left, right, arr, target, isDesc):
+        while left < right:
+            mid = (left + right)//2
+            if arr.get(mid) > target:
+                if isDesc:
+                    left = mid + 1
+                else:
+                    right = mid
+            elif arr.get(mid) < target:
+                if isDesc:
+                    right = mid
+                else:
+                    left = mid + 1
+            else:
+                return mid
+
+        return left if arr.get(left) == target else -1
+
+    def findInMountainArray(self, target, mountain_arr):
+        """
+        :type target: integer
+        :type mountain_arr: MountainArray
+        :rtype: integer
+        """
+        peak = self.findPeakIndex(mountain_arr)
+
+        result = self.binarySearch(0, peak, mountain_arr, target, False)
+
+        return result if result != -1 else self.binarySearch(peak, mountain_arr.length()-1, mountain_arr, target, True)
+
+
+# old solution same approach but avg implementation
 class Solution(object):
     def peakIndexInMountainArray(self, mountain_arr, length):
         # Corner cases: [1,2,3], [3,2,1], [1,3,2], [2,3,2], [2,3,1], [9,3,2,1], [1,2,3,4]

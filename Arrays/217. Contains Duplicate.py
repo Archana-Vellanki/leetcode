@@ -24,7 +24,7 @@
 # -109 <= nums[i] <= 109
 
 
-# Time omplexity: O(nlogn)
+# Time complexity: O(nlogn)
 # default sort in python is Tim sort: complexity nlogn, then linear time complexity for traversal and comparison hence O(nlogn + n ) ~= O(nlogn)
 
 # Space complexity: O(1)

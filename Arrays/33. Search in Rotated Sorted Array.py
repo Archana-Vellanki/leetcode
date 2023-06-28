@@ -79,6 +79,59 @@ class Solution(object):
                     right = mid
         return left
 
+# same time complexity and space complexity but different implementation by finding the largest element and then doing th binary search
+
+
+class Solution(object):
+    def findLargest(self, nums):
+        l = 0
+        r = len(nums) - 1  # 7
+        if nums[l] < nums[r]:
+            return r
+        print(nums)
+        while l < r:
+            mid = (l + r)//2
+            # print(l, mid, r)
+            if nums[l] < nums[r]:
+                return r
+            else:
+                if nums[l] < nums[mid]:
+                    l = mid
+                else:
+                    r = mid
+        return l
+
+    def binarySearch(self, left, right, nums, target):
+        print(left, right, nums, target)
+        while left < right:
+            mid = (left + right)//2
+            if nums[mid] < target:
+                left = mid + 1
+            elif nums[mid] > target:
+                right = mid
+            else:
+                return mid
+        return left if nums[left] == target else -1
+
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        pivot = self.findLargest(nums)
+
+        result = self.binarySearch(0, pivot, nums, target)
+
+        if result != -1:
+            return result
+        else:
+            length = len(nums)
+            if pivot < length - 1:
+                return self.binarySearch(pivot + 1, length - 1, nums, target)
+            else:
+                return pivot if nums[pivot] == target else - 1
+
 
 # class Solution(object):
 #     def find_pivot(self, nums):
