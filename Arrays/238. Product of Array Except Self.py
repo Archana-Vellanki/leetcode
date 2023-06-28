@@ -80,6 +80,6 @@ class Solution(object):
         # simultaneously store the rightProduct and update the output
         # output is the product of the calculated right product(suffix product) and the left product(which is already calculated in the previous loop)
         for i in range(length - 1, -1, -1):
-            output[i] = rightProduct * output[i]
+            output[i] *= rightProduct
             rightProduct *= nums[i]
         return output

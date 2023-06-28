@@ -34,6 +34,11 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
+# Time complexity: O(n)
+# Space complexity: O(1)
+# Approach: if both are None return True. if either is None return False. if neither is none, check the values and recursively check the left and right sub trees.
 class Solution(object):
     def isSameTree(self, p, q):
         """
