@@ -37,8 +37,9 @@
 # The solution maintains a queue for the traversal,
 # in each iteration,
 # initialize a list to store the values of all the nodes in the current level
-# traverse through all the nodes in the queue to complete the entire level and append their values to the list
-# add the child nodes of the nodes in the current level to the queue, which will be traversed in the next iteration
+# note the current size of the queue  as levelSize, to know the number of nodes in the current level.
+# traverse through levelSize number of nodes in the queue to complete the entire level and append their values to the list
+# add the child nodes(left and right) of the current node to the queue, which will be traversed in the next iteration
 # at the end of the outer loop iteration, add the list to the traversal list
 
 class Solution(object):
