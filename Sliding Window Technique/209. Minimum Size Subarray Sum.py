@@ -32,6 +32,12 @@
 
 # Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).
 
+
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Approach: Keep increasing the right pointer and adding the elements (at right index) to the sum until as long as the sum is less than target. 
+# Once it is greater than target, keep subtracting elements from the left as long as the sum is greater than target.
+
 class Solution(object):
     def minSubArrayLen(self, target, nums):
         """
