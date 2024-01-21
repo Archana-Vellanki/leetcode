@@ -37,7 +37,7 @@
 
 # Approach: This approach maintains a sliding window (with left and right pointers) and iterates through the nums list.
 # At every step, discard subarray if the temp sum is negative. (make it zero)
-# Update the temp byt adding up the current element and update the max_sum as necessary.
+# Update the temp by adding up the current element and update the max_sum as necessary.
 class Solution(object):
     def maxSubArray(self, nums):
         """
