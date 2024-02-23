@@ -1,0 +1,15 @@
+update_readme.sh
+
+# Ignore compiled binaries
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore editor-specific files
+.idea/
+.vscode/
+
+# Ignore temporary files
+*.tmp
+*~
