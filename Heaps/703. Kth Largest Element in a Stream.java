@@ -43,7 +43,7 @@
 // Ex: if the array is [8,4,5,2] and k = 3, our stream only contains [8,4,5]. If the next offered element is 3 or 1, we will peek for the smallest = 4 but not remove 4. 
 // And of 3 or 1 is added, we would have to pop it since the size exceeds k
 
-// Add method: offer the val to the stream and if adding it crosses the size beyond k, pop the smallest element. Then return the smallest element in the updated stream. Remember not to pop the element, just pek and return it.
+// add method: offer the val to the stream and if adding it crosses the size beyond k, pop the smallest element. Then return the smallest element in the updated stream. Remember not to pop the element, just pek and return it.
 
 // Time Complexity: Constructor: O(nlogk), Add method: O(logk)
 //Space complexity: O(k)
