@@ -15,6 +15,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '153. Find Minimum in Rotated Sorted Array.py'
 - '169. Majority Element.py'
 - '1752. Check if Array Is Sorted and Rotated.py'
+- '189. Rotate Array.py'
 - '217. Contains Duplicate.py'
 - '238. Product of Array Except Self.py'
 - '278. First Bad Version.java'
@@ -50,6 +51,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 
 ### Bit manipulation
 - '136.SingleNumber.py'
+- '191. Number of 1 Bits.py'
 - '268. Missing Number.py'
 
 ### DFS
@@ -68,7 +70,10 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '70. ClimbingStairs.py'
 
 ### Greedy
+- '402. Remove K Digits.py'
 - '55. Jump Game.py'
+- '846. Hand of Straights.py'
+- '860. Lemonade Change.py'
 
 ### Heaps
 - '703. Kth Largest Element in a Stream.java'
@@ -90,6 +95,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '3. Longest Substring Without Repeating Characters.py'
 - '424. Longest Repeating Character Replacement.py'
 - '643. Maximum Average Subarray I.py'
+- '713. Subarray Product Less Than K.py'
 - '904. Fruit Into Baskets.py'
 
 ### Strings
@@ -98,6 +104,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '14. Longest Common Prefix.py'
 - '22. Generate Parentheses.py'
 - '242. Valid Anagram.java'
+- '443. String Compression.py'
 - '5. Longest Palindromic Substring.py'
 
 ### Two pointers Technique
@@ -105,8 +112,10 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '141. Linked List Cycle.py'
 - '167. Two Sum II - Input Array Is Sorted.py'
 - '283. Move Zeroes.java'
+- '977. Squares of a Sorted Array.py'
 
 ### graphs
+- '200. Number of Islands.py'
 - '207.CourseSchedule.py'
 - '210.CourseScheduleII.py'
 
@@ -117,6 +126,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '101.SymmetricTree.py'
 - '102. Binary Tree Level Order Traversal.java'
 - '102. Binary Tree Level Order Traversal.py'
+- '104. Maximum Depth of Binary Tree.py'
 - '450. Delete Node in a BST.java'
 - '94.Binary Tree Inorder Traversal using Iteration.py'
 - '94.Binary Tree Inorder Traversal using recursion.py'
