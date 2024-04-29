@@ -16,6 +16,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '169. Majority Element.py'
 - '1752. Check if Array Is Sorted and Rotated.py'
 - '189. Rotate Array.py'
+- '2073. Time Needed to Buy Tickets.py'
 - '217. Contains Duplicate.py'
 - '238. Product of Array Except Self.py'
 - '278. First Bad Version.java'
@@ -51,6 +52,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 
 ### Bit manipulation
 - '136.SingleNumber.py'
+- '190. Reverse Bits.py'
 - '191. Number of 1 Bits.py'
 - '268. Missing Number.py'
 
@@ -65,6 +67,7 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '79. Word Search.py'
 
 ### Dynamic Programming
+- '300. Longest Increasing Subsequence.py'
 - '322. Coin Change.py'
 - '62. uniquePaths.py'
 - '70. ClimbingStairs.py'
@@ -76,7 +79,10 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '860. Lemonade Change.py'
 
 ### Heaps
+- '1046. Last Stone Weight.py'
+- '215. Kth Largest Element in an Array.py'
 - '703. Kth Largest Element in a Stream.java'
+- '973. K Closest Points to Origin.py'
 
 ### Intervals
 - '56. Merge Intervals.java'
@@ -102,16 +108,21 @@ Feel free to explore the solutions, and I hope you find them helpful in your lea
 - '13. romanToInteger.py'
 - '139.WordBreak.py'
 - '14. Longest Common Prefix.py'
+- '20. Valid Parentheses.py'
 - '22. Generate Parentheses.py'
 - '242. Valid Anagram.java'
+- '383. Ransom Note.py'
 - '443. String Compression.py'
 - '5. Longest Palindromic Substring.py'
+- '844. Backspace String Compare.py'
 
 ### Two pointers Technique
 - '121. Best Time to Buy and Sell Stock.py'
 - '141. Linked List Cycle.py'
 - '167. Two Sum II - Input Array Is Sorted.py'
+- '27.Remove Number.py'
 - '283. Move Zeroes.java'
+- '345. Reverse Vowels of a String.py'
 - '977. Squares of a Sorted Array.py'
 
 ### graphs
