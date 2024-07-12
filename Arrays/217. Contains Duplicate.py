@@ -64,3 +64,9 @@ class Solution(object):
             else:
                 hashSet.add(nums[i])
         return False
+
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        hashSet = set(nums)
+        return len(hashSet) != len(nums)
