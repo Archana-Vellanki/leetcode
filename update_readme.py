@@ -1,57 +1,49 @@
 import os
 
-def generate_file_list(directory='.', indent=0):
+counter = 0
+
+
+def list_files_in_directory(directory='.', indent=''):
     """
-    Recursively generate a list of files in each folder.
+    Generates a formatted list of all files and directories within a given directory.
+    This function skips hidden files and directories.
 
-    :param directory: Directory to start from
-    :param indent: Indentation level for nested folders
-    :return: Formatted string with file listing
+    :param directory: The starting directory to scan.
+    :param indent: The current indentation level for nested directories.
+    :return: A formatted string of files and directories.
     """
-    file_list = ""
-    for root, dirs, files in os.walk(directory):
-        # Skip hidden directories
-        dirs[:] = [d for d in dirs if not d.startswith('.')]
-        # Add directory to the file list
-        relative_path = os.path.relpath(root, start=directory)
-        if relative_path == ".":
-            relative_path = "Root Directory"
-        file_list += f"{'  ' * indent}- **{os.path.basename(relative_path)}/**\n"
-
-        # List files in the current directory
-        for file in sorted(files):
-            if not file.startswith('.'):
-                file_list += f"{'  ' * (indent + 1)}- {file}\n"
-
-        # Recursively list subdirectories
-        for d in sorted(dirs):
-            file_list += generate_file_list(os.path.join(root, d), indent + 1)
-        break  # Prevent deeper recursion since we manually traverse
-    return file_list
+    result = ""
+    global counter
+    # print(os.listdir(directory))
+    for item in os.listdir(directory):
+        if item.startswith('.'):
+            continue  # Skip hidden files and directories
+        path = os.path.join(directory, item)
+        if os.path.isdir(path):
+            result += f"### {indent}**{item}**\n"  # Directory
+            result += list_files_in_directory(path, indent + '  ')
+        else:
+            if item != 'update_readme.py' and item != 'update_readme.sh' and item != 'README.md':
+                counter += 1
+                result += f"{indent}- {item}\n"  # File
+    return result
 
 
 def update_readme():
     """
-    Update the README.md file with the current list of files in each folder.
+    Updates the README.md file with the list of files in the project directory.
     """
-    # Define the content for the README file
-    header = "# LeetCode Problem Solutions\n\nWelcome to my LeetCode problem solutions repository! Here, you'll find my solutions to various LeetCode problems organized by category.\n\n## Introduction\n\n\
+    header = "# LeetCode Problem Solutions\n\n"
+    file_structure = list_files_in_directory()
+    introduction = f"Welcome to my LeetCode problem solutions repository! Here, you'll find my solutions to various LeetCode problems organized by category.\n\n## Introduction\n\n\
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. \n\n\
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! "
-    introduction = ""
-    # (
-    #       "This README file is automatically updated with a list of all files in the project directory "
-    #       "every time there is a push to the main branch.\n\n"
-    #   )
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: {counter}\n\n"
+    # introduction = "This README file lists all files in the project directory.\n\n"
 
-    # Generate the file list
-    file_structure = generate_file_list()
-
-    # Write the content to the README file
-    with open('README.md', 'w') as f:
-        f.write(header)
-        f.write(introduction)
-        f.write(file_structure)
+    with open('README.md', 'w') as readme_file:
+        readme_file.write(header)
+        readme_file.write(introduction)
+        readme_file.write(file_structure)
 
     print("README.md updated successfully.")
 
