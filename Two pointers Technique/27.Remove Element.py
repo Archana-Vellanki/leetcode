@@ -50,29 +50,17 @@
 # 0 <= nums[i] <= 50
 # 0 <= val <= 100
 
-# not yet solved
+# Approach: move all non-val elements to the beginning of the array. Keep track of the index till which the non-val elements are replaced. Return that index.
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        k = 0
-        i, j = 0, len(nums) - 1
-        while i < j:
-            # print(i, j)
-            while j >= 0 and nums[j] == val:
-                j -= 1
-            if j < 0:
-                break
-            if nums[i] == val:
-                # i += 1
-                nums[i], nums[j] = nums[j], nums[i]
-                i += 1
-                k += 1
-            else:
-                i += 1
-                k += 1
-        if i == j and nums[i] != val:
-            k += 1
-        # if i == j and nums[i] == val:
-        #     k -= 1
+        i =0
+        length = len(nums)
+        j = 0
+        while j < length:
+            if nums[j] != val:
+                nums[i] = nums[j]
+                i +=1
+            j+=1
+        return i
 
-        return k
