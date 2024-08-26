@@ -36,7 +36,11 @@
 # Approach: maintain a hashmap to store chars and their indices, along with two pointers(left and right) to indicate the sliding window(current substring)
 # For every iteration,
 #   check if the char at the right index is present in the hashmap.
-#       If it is present, that means it is repeating. move the left pointer ahead of it (if it has not crossed it already)
+#   If it is present, that means it is repeating. move the left pointer ahead of it (if it has not crossed it already- this happens when 
+#         there is more than 1 repeating character, to solve the ambiguity of where to move the left pointer)
+#         Example: "abcdbaef" when right pointer is at second 'b',  it is already in the hashmap and hence we have to move the left pointer to first 'b' index + 1.
+#         When the right pointer goes to second 'a',since it is also a repeating character, we need to move the left pointer to first 'a' index + 1 
+#         but our current left pointer has already crossed it hence checking if it has already crossed using max(...) is necessary
 #   update the maximum length and the char index in the hashmap
 #   move the right pointer to the next character
 
