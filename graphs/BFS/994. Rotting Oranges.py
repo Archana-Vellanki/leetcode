@@ -37,14 +37,15 @@
 
 
 # Approach: Regular BFS might lead to incorrect solution because it processes the rotten oranges consecutively by completely rotting the oranges 
-# connecting to one rotten orange before visiting the next rotten orange. but to achieve the minimum number of minutes, we need the rotting process to start from all initially rotten oranges simultaneously. 
-# Hence before starting the BFS, add all the initial rotten oranges to the queue. Then pop the rotten orange from the queue, rot the adjacent oranges 
-# and add them to the queue. By doing this we will ensure that rotting process starts from all the rotting oranges simultaneously and hence results in minimum number
-# of minutes. 
+# connecting to one rotten orange before visiting the next rotten orange. but to achieve the minimum number of minutes, 
+# we need the rotting process to start from all initially rotten oranges simultaneously. 
+# Hence before starting the BFS, add all the initial rotten oranges to the queue. Then pop the initial rotten oranges one-by-onde from the queue, 
+# rot the adjacent oranges and add them to the queue. 
+# By doing this we will ensure that rotting process starts from all the rotten oranges simultaneously and hence results in minimum number of minutes. 
 
 # Example: Consider this example [[2,1,1],[1,1,1],[0,1,2]]. With regular bfs, we will visit all oranges adjacent to the first rotten orange 
 # and Only after completely visiting these would we move to the second rotten orange (2) at the opposite corner. 
-# we will visit the second 2 but the oranges adjacent to second 2 will take longer time. because the rotting process starts from here as well. 
+# we will visit the second 2 but the oranges adjacent to second 2 will take longer time now. 
 # so by adding both the rotten orangews to the queue initially, BFS processes the neighbours of both at the same time,
 # there by ensuring minimum number of minutes.
 
@@ -90,3 +91,38 @@ class Solution:
                     return -1
         return minutes
 
+# Same Approach different implementation: 
+class Solution:
+    def bfs(self, grid, visited, q, fresh_count):
+        minutes = 0
+        dr = [1, -1, 0, 0]
+        dc = [0, 0, 1, -1]
+       
+        while q:
+            r, c, mins = q.pop(0)
+            for k in range(4):
+                nr, nc = r + dr[k], c + dc[k]
+                if 0 <= nr < len(grid) and 0 <= nc < len(grid[0]) and grid[nr][nc] == 1:
+                    grid[nr][nc] = 2
+                    fresh_count -= 1
+                    q.append((nr, nc, mins + 1))
+                    visited.add((nr, nc))
+                    minutes = max(minutes, mins + 1)
+        return fresh_count, minutes
+
+    def orangesRotting(self, grid: List[List[int]]) -> int:
+        visited = set()
+        fresh_count = 0
+        # Add all initial rotten oranges to the queue
+        q = []
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == 2:
+                    q.append((i, j, 0))
+                    visited.add((i, j))
+                elif grid[i][j] == 1:
+                    fresh_count += 1
+        fresh_count, minutes = self.bfs(grid, visited, q, fresh_count)
+        
+        # Check if there's any fresh orange left
+        return minutes if fresh_count == 0 else -1
