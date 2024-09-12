@@ -33,6 +33,10 @@
 # If at any point the letter in the ransom note is not found in the dictionary, return False. 
 # If we complete the iteration without any such case. That means we found all the letters and hence return True
 
+# Time complexity: O(m + n) where m is the magazine length and n is the ransomNote length
+# Space complexity: O(m)
+
+
 from collections import Counter
 
 
