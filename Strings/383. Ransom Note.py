@@ -53,7 +53,7 @@ class Solution:
 
 # Approach2: Since it contains only lower case English letters, you can use array of length 26 to keep track of the count
 # Time complexity: O(m + n) where m is the magazine length and n is the ransomNote length
-# Space complexity:
+# Space complexity: O(1)
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         arr = [0]*26
