@@ -64,11 +64,7 @@ class Solution:
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        length = len(nums)
-
-        nums.sort()
-        return nums[length//2]
-
+        return sorted(nums)[len(nums)//2]
 
 # Time complexity: O(n)
 # Space complexity: O(n)
