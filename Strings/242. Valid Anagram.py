@@ -31,6 +31,24 @@
 
 # Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
+# Ideal solution:
+# Approach: create an integer array of size 26 each index indicating the
+# letters from a - z.
+# Time complexity: O(n)
+# Space complexity: O(1) array is of constant size 26
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        letters = [0]*26
+        a= ord('a')
+        if len(s) != len(t):
+            return False
+        for i in range(len(s)):
+            letters[ord(s[i])- a] += 1
+            letters[ord(t[i]) - a] -= 1
+        return all(x == 0 for x in letters)
+ 
+
 # Approach: use a hashmap to store the frequencies of each character in s. While iterating through t, reduce the count of each character 
 # By the end of the iteration if the hashmap is empty that means it is a valid anagram of s, hence return true; return false otherwise
 
