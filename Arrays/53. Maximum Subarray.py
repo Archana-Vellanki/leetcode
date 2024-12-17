@@ -32,10 +32,10 @@
 # Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
 # -----------------------------------------------------
-# Naive Approach: 
-Two loops exploring all possible subarrays leading to O(n^2) time complexity
+# ---------------1. Naive Approach: -------------------------
+# Two loops exploring all possible subarrays leading to O(n^2) time complexity
 
-# Divide and Conquer:
+# --------------2. Divide and Conquer:-----------------------
 # Divide the array into 2 halves until it reaches size 1
 # The number of times you can divide until you reach 1 is log₂(n) → This is the depth of the recursion tree.
 # At each level of the recursion tree, you calculate:
@@ -48,7 +48,7 @@ Two loops exploring all possible subarrays leading to O(n^2) time complexity
 # Time complexity: O(nlogn) 
 # Space Complexity: O(1)
 
-# Kadane's Algorithm:
+# ---------------3. Kadane's Algorithm:----------------------------
 # The idea of Kadane’s algorithm is to traverse over the array from left to right and for each element, 
 # find the maximum sum among all subarrays ending at that element. The result will be the maximum of all these values. 
 # But, the main issue is how to calculate maximum sum among all the subarrays ending at an element in O(1) time?
