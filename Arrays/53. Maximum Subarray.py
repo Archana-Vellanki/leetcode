@@ -31,8 +31,38 @@
 
 # Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
+# -----------------------------------------------------
+# Naive Approach: 
+Two loops exploring all possible subarrays leading to O(n^2) time complexity
 
-# Time complexity: O(N) - since only one traversal
+# Divide and Conquer:
+# Divide the array into 2 halves until it reaches size 1
+# The number of times you can divide until you reach 1 is log₂(n) → This is the depth of the recursion tree.
+# At each level of the recursion tree, you calculate:
+    # a) Maximum subarray sum in left half 
+    # b) Maximum subarray sum in right half 
+    # c) Maximum subarray sum such that the subarray crosses the midpoint 
+# The maximum sum crossing the midpoint → O(n) time because it requires a single scan of the array to compute sums for the crossing part.
+# O(n)×O(logn)=O(nlogn)
+
+# Time complexity: O(nlogn) 
+# Space Complexity: O(1)
+
+# Kadane's Algorithm:
+# The idea of Kadane’s algorithm is to traverse over the array from left to right and for each element, 
+# find the maximum sum among all subarrays ending at that element. The result will be the maximum of all these values. 
+# But, the main issue is how to calculate maximum sum among all the subarrays ending at an element in O(1) time?
+# To calculate the maximum sum of subarray ending at current element, say maxEnding, we can use the maximum sum ending at the previous element.
+# So for any element, we have two choices:
+
+# Choice 1: Extend the maximum sum subarray ending at the previous element by adding the current element to it. 
+# If the maximum subarray sum ending at the previous index is positive, then it is always better to extend the subarray.
+# Choice 2: Start a new subarray starting from the current element. 
+# If the maximum subarray sum ending at the previous index is negative, it is always better to start a new subarray from the current element.
+
+# This means that maxEnding at index i = max(maxEnding at index (i – 1) + arr[i], arr[i]) and the maximum value of maxEnding at any index will be our answer. 
+
+# Time complexity: O(N)
 # Space complexity: O(1)
 
 # Approach: This approach maintains a sliding window (with left and right pointers) and iterates through the nums list.
@@ -61,8 +91,6 @@ class Solution(object):
         return max_sum
 
 # Same approach yet simple
-
-
 class Solution(object):
     def maxSubArray(self, nums):
         """
@@ -77,3 +105,4 @@ class Solution(object):
             temp_sum += i
             max_sum = max(max_sum, temp_sum)
         return max_sum
+
