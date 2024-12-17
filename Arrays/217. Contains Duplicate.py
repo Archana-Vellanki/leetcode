@@ -23,13 +23,12 @@
 # 1 <= nums.length <= 105
 # -109 <= nums[i] <= 109
 
+# 3 approaches:
 
+# Approach 1: Sorting and checking the previous elements for equality.
 # Time complexity: O(nlogn)
 # default sort in python is Tim sort: complexity nlogn, then linear time complexity for traversal and comparison hence O(nlogn + n ) ~= O(nlogn)
-
 # Space complexity: O(1)
-
-
 class Solution(object):
     def containsDuplicate(self, nums):
         """
@@ -46,11 +45,9 @@ class Solution(object):
             prev = nums[i]
         return False
 
+# Approach 2: Hash Set to keep track of the visited elements
 # Time complexity: O(n)- just one traversal
-
 # Space complexity: O(n) worst case the hash set contains all the elements in the list
-
-
 class Solution(object):
     def containsDuplicate(self, nums):
         """
@@ -65,7 +62,9 @@ class Solution(object):
                 hashSet.add(nums[i])
         return False
 
-
+# Approach 3: Hashset length mismatch indicates duplicate
+# Time complexity: O(n)- just one traversal
+# Space complexity: O(n) 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         hashSet = set(nums)
