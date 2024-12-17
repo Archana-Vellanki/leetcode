@@ -32,6 +32,33 @@
 # Space complexity: O(1)
 
 # Approach:
+# diff = right - left
+# if we want maximum diff, right should be max and left should be min
+# that means we should try for minimum left but instead of trying to find the maximum right value, we will iterate through the array for different values of right. At each iteration update the maximum diff.
+# IF at any position, right < Left it means that we have found a new minimum at right index. Hence reassign left = right and right = right + 1. starting from that index again.
+# Time complexity: O(n)
+# Space complexity: O(1)
+
+
+# Simpler approach
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        length = len(prices)
+        left = 0
+        right = 1
+        max_profit = 0
+        while right < length:
+            if prices[right] < prices[left]:
+                left = right
+            max_profit = max(max_profit, prices[right] - prices[left])
+            right += 1
+        return max_profit
+        
+# Step-by-step procedure:
 # Maintain two pointers left and right and max_profit to store the maximum profit
 # the left pointer indicates the day to buy the stock, the right indicates the day to sell the stock
 # so (right - left) should be maximum to get maximum profit
@@ -60,24 +87,5 @@ class Solution(object):
                     max_profit = profit
             else:
                 left = right
-            right += 1
-        return max_profit
-
-
-# Simpler approach
-class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
-        length = len(prices)
-        left = 0
-        right = 1
-        max_profit = 0
-        while right < length:
-            if prices[right] < prices[left]:
-                left = right
-            max_profit = max(max_profit, prices[right] - prices[left])
             right += 1
         return max_profit

@@ -27,6 +27,8 @@
 
 # 1 <= n <= 45
 
+# Dynamic Programming approach with memoization - bottom up approach
+
 class Solution(object):
     def climbStairs(self, n):
         """

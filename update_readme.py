@@ -3,7 +3,7 @@ import os
 counter = 0
 
 
-def list_files_in_directory(directory='.', indent=''):
+def list_files_in_directory(directory=".", indent=""):
     """
     Generates a formatted list of all files and directories within a given directory.
     This function skips hidden files and directories.
@@ -16,14 +16,18 @@ def list_files_in_directory(directory='.', indent=''):
     global counter
     # print(os.listdir(directory))
     for item in os.listdir(directory):
-        if item.startswith('.'):
+        if item.startswith("."):
             continue  # Skip hidden files and directories
         path = os.path.join(directory, item)
         if os.path.isdir(path):
             result += f"### {indent}**{item}**\n"  # Directory
-            result += list_files_in_directory(path, indent + '  ')
+            result += list_files_in_directory(path, indent + "  ")
         else:
-            if item != 'update_readme.py' and item != 'update_readme.sh' and item != 'README.md':
+            if (
+                item != "update_readme.py"
+                and item != "update_readme.sh"
+                and item != "README.md"
+            ):
                 counter += 1
                 result += f"{indent}- {item}\n"  # File
     return result
@@ -40,7 +44,7 @@ def update_readme():
     Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: {counter}\n\n"
     # introduction = "This README file lists all files in the project directory.\n\n"
 
-    with open('README.md', 'w') as readme_file:
+    with open("README.md", "w") as readme_file:
         readme_file.write(header)
         readme_file.write(introduction)
         readme_file.write(file_structure)
@@ -48,6 +52,6 @@ def update_readme():
     print("README.md updated successfully.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     counter = 0
     update_readme()
