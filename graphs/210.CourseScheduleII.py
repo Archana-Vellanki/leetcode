@@ -33,6 +33,42 @@
 # ai != bi
 # All the pairs [ai, bi] are distinct.
 
+# Learn Kahn's Algorithm and its implementation
+# Time Complexity: O(V+E)
+# Space Complexity: O(V)
+
+
+class Solution:
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        if not numCourses:
+            return []
+        if not prerequisites:
+            return [i for i in range(numCourses)]
+        indegree = [0]*numCourses
+        adjList = {each:[] for each in range(numCourses)}
+        for each in prerequisites:
+            adjList[each[1]] = adjList.get(each[1], [])
+            adjList[each[1]].append(each[0])
+            indegree[each[0]] += 1
+        result = []
+        q = []
+        for course, prereq in enumerate(indegree):
+            if prereq == 0:
+                q.append(course)
+        number_of_completed_courses = 0
+        while q:
+            course = q.pop(0)
+            result.append(course)
+            number_of_completed_courses += 1
+            for adv_course in adjList[course]:
+                indegree[adv_course] -= 1
+                if indegree[adv_course] == 0:
+                    q.append(adv_course)
+        if number_of_completed_courses != numCourses:
+            return []
+        return result
+
+# Same approach
 
 class Solution(object):
     def findOrder(self, numCourses, prerequisites):
