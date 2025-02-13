@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 134
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 135
 
 ### **graphs**
 ###   **BFS**
@@ -60,6 +60,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 28. Find the Index of the First Occurrence in a String.py
   - 409. Longest Palindrome.py
   - 22. Generate Parentheses.py
+  - 227. Basic Calculator II.py
 ### **Binary Search**
   - 875. Koko Eating Bananas.java
   - 74. Search a 2D Matrix.java
