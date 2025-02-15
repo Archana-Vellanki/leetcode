@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 135
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 136
 
 ### **graphs**
 ###   **BFS**
@@ -106,6 +106,8 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 80. Remove Duplicates from Sorted Array II.py
   - 283. Move Zeroes.java
   - 345. Reverse Vowels of a String.py
+### **Prefix_Sum**
+  - 560. Subarray Sum Equals K.py
 ### **DFS**
   - 79. Word Search.py
   - 417. Pacific Atlantic Water Flow.py
