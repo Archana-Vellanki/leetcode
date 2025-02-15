@@ -32,8 +32,11 @@
 #      _  _|            ==> prefixSum = 3
 #      _  _  _  _  _|   ==> prefixSum = 8
 #           |_  _  _|   ==> required subarray with sum = 5
-# With a combination of Hashmap and prefixSum you can find out the sum of all possible subarrays 
+# With a combination of Hashmap(to store the prefixeSums encountered) and prefixSum you can find out the sum of all possible subarrays 
 
+
+# Time Complexity:O(n)
+# Space Complexity:O(n)
 
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
