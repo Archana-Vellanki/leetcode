@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 136
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 137
 
 ### **graphs**
 ###   **BFS**
@@ -24,6 +24,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 973. K Closest Points to Origin.py
   - 1046. Last Stone Weight.py
 ### **stack**
+  - 71. Simplify Path.py
   - 739. Daily Temperatures.py
   - 1249. Minimum Remove to Make Valid Parentheses.py
 ### **Greedy**
