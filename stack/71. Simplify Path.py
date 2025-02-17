@@ -71,11 +71,11 @@
 # "..." is a valid name for a directory in this problem.
 
 # Approach: Key point: Split the path on "/" and use stack to process each of the intermediate paths
-# if length > 2: its a valid directory name/file name so add it to the stack
+# if length > 2: it's a valid directory name/file name so add it to the stack
 # else, check for "."  - nothing to do 
-#       check for ".." - pop the last directory becausewe have to go to the parent
+#       check for ".." - pop the last directory because we have to go to the parent
 
-# Can be done using character by character approach also.
+# Can be done using character-by-character approach also. Scroll down.
 # Time Complexity:O(n)
 # Space Complexity:O(n)
 
@@ -110,4 +110,48 @@ class Solution(object):
                  
                     
 
+# Approach 2 using Character by character approach:
+# Possible optimizations - temp can be used as a list instead of a string
+
+class Solution(object):
+    def simplifyPath(self, path):
+        """
+        :type path: str
+        :rtype: str
+        """
+        stack = []
+        i =  0
+        length = len(path)
+        temp = ""
+        while i < length:
+            # print(stack)
+            if path[i] == '/':
+                if temp:
+                    if temp == "." or (temp == ".." and not stack):
+                        i+=1
+                        temp = ""
+                        continue
+                    elif temp ==".." and stack:
+                        temp = ""
+                        stack.pop()
+                    else:
+                        stack.append(temp)
+                        temp = ""
+                else:
+                    i+=1
+                    continue
+            else:
+                temp = temp + path[i]
+            i+=1
+        if temp:
+            if temp ==".." and stack:
+                stack.pop()
+            elif temp == "." or (temp ==".." and not stack):
+                # we dont have to do anything
+                temp = ''
+            else:
+                stack.append(temp)
+        # print(stack)
+        return "/" + "/".join(stack)
+                 
                     
