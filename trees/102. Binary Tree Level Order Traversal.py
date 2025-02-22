@@ -65,3 +65,24 @@ class Solution(object):
                     que.append(node.right)
             traversalList.append(trvrsl)
         return traversalList
+
+# recursion
+# pass level as a parameter to the recursive function call
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root:
+            return []
+        result = []
+        def levelOrder(node, level):
+            if level < len(result):
+                result[level].append(node.val)
+            else:
+                result.append([node.val])
+            if node.left:
+                levelOrder(node.left, level+1)
+            if node.right:
+                levelOrder(node.right, level+1)
+        
+        levelOrder(root, 0)
+        
+        return result
