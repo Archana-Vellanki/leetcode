@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 139
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 140
 
 ### **graphs**
 ###   **BFS**
@@ -149,6 +149,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 231. Power of Two.py
   - 268. Missing Number.py
 ### **trees**
+  - 145. Binary Tree Postorder Traversal.py
   - 226. Invert Binary Tree.py
   - 102. Binary Tree Level Order Traversal.java
   - 98. Validate Binary Search Tree.py
