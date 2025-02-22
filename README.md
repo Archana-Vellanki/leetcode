@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 140
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 139
 
 ### **graphs**
 ###   **BFS**
@@ -159,7 +159,6 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 450. Delete Node in a BST.java
   - 144. Binary Tree Preorder Traversal.py
   - 235. Lowest Common Ancestor of a Binary Search Tree.py
-  - 94.Binary Tree Inorder Traversal using recursion.py
   - 101.SymmetricTree.py
   - 102. Binary Tree Level Order Traversal.py
 ### **Intervals**
