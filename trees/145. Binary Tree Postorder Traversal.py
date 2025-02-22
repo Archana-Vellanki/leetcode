@@ -71,3 +71,22 @@ class Solution:
             result.append(node.val)
         postOrder(root)
         return result
+
+# Iterative:
+class Solution:
+    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return []
+
+        node = root
+        stack = [node]
+        result = []
+        while stack:
+            popped = stack.pop()
+            result.append(popped.val)
+            if popped.left:
+                stack.append(popped.left)
+            if popped.right:
+                stack.append(popped.right)
+            
+        return result[::-1]
