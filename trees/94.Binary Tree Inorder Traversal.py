@@ -23,6 +23,7 @@
 # The number of nodes in the tree is in the range [0, 100].
 # -100 <= Node.val <= 100
 
+# Iterative Approach
 
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -58,3 +59,25 @@ class Solution(object):
                 break
 
         return arr
+
+
+# Recursive approach
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        result = []
+        if not root:
+            return result
+        def inOrder(root):
+            if not root:
+                return None
+            inOrder(root.left)
+            result.append(root.val)
+            inOrder(root.right)
+        inOrder(root)
+        return result
