@@ -150,6 +150,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 268. Missing Number.py
 ### **trees**
   - 145. Binary Tree Postorder Traversal.py
+  - 94.Binary Tree Inorder Traversal.py
   - 226. Invert Binary Tree.py
   - 102. Binary Tree Level Order Traversal.java
   - 98. Validate Binary Search Tree.py
@@ -160,7 +161,6 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 235. Lowest Common Ancestor of a Binary Search Tree.py
   - 94.Binary Tree Inorder Traversal using recursion.py
   - 101.SymmetricTree.py
-  - 94.Binary Tree Inorder Traversal using Iteration.py
   - 102. Binary Tree Level Order Traversal.py
 ### **Intervals**
   - 435. Non-overlapping Intervals.py
