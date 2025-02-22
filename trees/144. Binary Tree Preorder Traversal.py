@@ -50,6 +50,7 @@
 # Follow up: Recursive solution is trivial, could you do it iteratively?
 
 # Recursive:
+# add current node to result. then recursively call the function for left subtree and right subtree
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
@@ -66,6 +67,9 @@ class Solution:
         return result
 
 # Iterative
+# For every node, we will add it to the result first.
+# since stack pops the last node entered first, we will add right node followed by left node.
+
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
