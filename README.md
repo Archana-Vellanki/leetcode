@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 140
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 141
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -90,6 +90,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 70. ClimbingStairs.py
   - 62. uniquePaths.py
   - 300. Longest Increasing Subsequence.py
+  - 1143. Longest Common Subsequence.py
   - 198. House Robber.py
   - 746. Min Cost Climbing Stairs.py
 ### **Heaps**
