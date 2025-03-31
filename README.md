@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 141
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 142
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -133,6 +133,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 ### **sorting**
   - 912. Sort an Array.java
 ### **Bit manipulation**
+  - 371. Sum of Two Integers.py
   - 231. Power of Two.py
   - 136.SingleNumber.py
   - 190. Reverse Bits.py
