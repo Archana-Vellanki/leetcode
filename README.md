@@ -123,7 +123,6 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 350.IntersectionOfTwoArraysII.py
   - 53. Maximum Subarray.py
   - 34.FindFirstandLastPositionofElementInSortedArray.py
-  - 153. Find Minimum in Rotated Sorted Array.py
   - 289. Game of Life.py
   - 1752. Check if Array Is Sorted and Rotated.py
   - 238. Product of Array Except Self.py
@@ -163,6 +162,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 278. First Bad Version.py
   - 74. Search a 2D Matrix.java
   - 33. Search in Rotated Sorted Array.py
+  - 153. Find Minimum in Rotated Sorted Array.py
   - 852. Peak Index in a Mountain Array.py
   - 35. Search Insert Position.py
   - 875. Koko Eating Bananas.java
