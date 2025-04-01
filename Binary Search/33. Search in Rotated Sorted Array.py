@@ -32,156 +32,44 @@
 # nums is an ascending array that is possibly rotated.
 # -104 <= target <= 104
 
+"""
+Time complexity: O(logN)
+Space complexity: O(1)
 
-# Time complexity: O(logN)
-# Space complexity: O(1)
+"Intuition: Even though the array is rotated, one half is always sorted. By determining which half is sorted, you can quickly decide whether the target lies within that half, and then continue narrowing down your search accordingly. 
 
-# Approach: Find the position of the minimum element in the rotated sorted array.
-# check if the element is between the 0 index and index of minimum element or in between the index of minimum element and the last element
-# perform binary search accordingly
-class Solution(object):
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        mini = self.pivot(nums)
-        if target < nums[mini]:
-            return -1
-        elif target == nums[mini]:
-            return mini
-        else:
-            left = 0 if target >= nums[0] else mini
-            right = len(nums) - 1 if target <= nums[-1] else mini
-            while left <= right:
-                mid = (left + right)//2
-                if target < nums[mid]:
-                    right = mid - 1
-                elif target > nums[mid]:
-                    left = mid + 1
-                else:
-                    return mid
-            return -1
+Approach: Dividing the Array:
+Compare mid element with the right most element to determine if the right half is sorted. 
 
-    def pivot(self, nums):
-        left = 0
-        right = len(nums) - 1
+1. If nums[mid] <= nums[left] the right part is in order; 
+      Check if the target lies between nums[mid] and nums[right]. If it does, narrow your search to the right half; if not, search the left half.
 
-        while left < right:
-            mid = (left + right)//2
-            if nums[left] < nums[right]:
-                return left
-            else:
-                if nums[mid] > nums[right]:
-                    left = mid + 1
-                else:
-                    right = mid
-        return left
+2. otherwise, the left part must be sorted.
+      Check if the target lies between nums[left] and nums[mid]. If it does, you know the target must be in this sorted part, so you move your search to the left. Otherwise, you search the right half."
+"""
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        length = len(nums)
+        if length == 1:
+            return 0 if nums[0]==target else -1
 
-# same time complexity and space complexity but different implementation by finding the largest element and then doing th binary search
-
-
-class Solution(object):
-    def findLargest(self, nums):
-        l = 0
-        r = len(nums) - 1  # 7
-        if nums[l] < nums[r]:
-            return r
-        print(nums)
-        while l < r:
-            mid = (l + r)//2
-            # print(l, mid, r)
-            if nums[l] < nums[r]:
-                return r
-            else:
-                if nums[l] < nums[mid]:
-                    l = mid
-                else:
-                    r = mid
-        return l
-
-    def binarySearch(self, left, right, nums, target):
-        print(left, right, nums, target)
-        while left < right:
-            mid = (left + right)//2
-            if nums[mid] < target:
-                left = mid + 1
-            elif nums[mid] > target:
-                right = mid
-            else:
+        lo, hi = 0, length - 1
+        while lo < hi:
+            mid = (lo + hi)//2
+            if nums[mid] == target:
                 return mid
-        return left if nums[left] == target else -1
-
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        pivot = self.findLargest(nums)
-
-        result = self.binarySearch(0, pivot, nums, target)
-
-        if result != -1:
-            return result
-        else:
-            length = len(nums)
-            if pivot < length - 1:
-                return self.binarySearch(pivot + 1, length - 1, nums, target)
+            if nums[mid] < nums[hi]:
+                # Mid to hi is sorted. 
+                if target > nums[mid] and target <= nums[hi]:
+                    # target is between mid and hi
+                    lo = mid + 1
+                else:
+                    hi = mid
             else:
-                return pivot if nums[pivot] == target else - 1
-
-
-# class Solution(object):
-#     def find_pivot(self, nums):
-#         length = len(nums)
-#         l = 0
-#         r = length - 1
-
-#         if nums[l] < nums[r]:
-#             return -1
-
-#         while l < r:
-#             mid = (l+r)//2
-#             if nums[mid] > nums[mid+1]:
-#                 return mid
-#             else:
-#                 if nums[0] < nums[mid]:
-#                     l = mid
-#                 else:
-#                     r = mid
-#         return r
-
-#     def binarySearch(self, left, right, nums, target):
-#         while left <= right:
-#             mid = (left + right)//2
-#             if nums[mid] == target:
-#                 return mid
-#             elif nums[mid] < target:
-#                 left = mid + 1
-#             else:
-#                 right = mid - 1
-#         return -1
-
-#     def search(self, nums, target):
-#         """
-#         :type nums: List[int]
-#         :type target: int
-#         :rtype: int
-#         """
-#         length = len(nums)
-
-#         pivot = self.find_pivot(nums)
-
-#         if pivot == -1:
-#             return self.binarySearch(0, length - 1, nums, target)
-#         if target > nums[pivot]:
-#             return -1
-#         if target == nums[pivot]:
-#             return pivot
-
-#         if target >= nums[0]:
-#             return self.binarySearch(0, pivot, nums, target)
-#         else:
-#             return self.binarySearch(pivot+1, length - 1,  nums, target)
+                # Lo to mid is sorted
+                if target >= nums[lo] and target < nums[mid]:
+                    # target is between lo and mid
+                    hi = mid - 1
+                else:
+                    lo = mid + 1
+        return lo if nums[lo]== target else -1
