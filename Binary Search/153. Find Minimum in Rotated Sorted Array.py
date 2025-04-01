@@ -41,7 +41,7 @@
 # Space complexity: O(1)
 
 # Approach: if an array is sorted and rotated, the left most element is greater than right most element
-# To find in which half the minimum most element is present, compare the mid element with the right element.
+# To find in which half the minimum most element is present, compare the mid element with the right most element.
 # if mid > right, it means the minimum most element is in the second half.
 # else it is in the first half.
 # change the boundaries accordingly
