@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 142
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 143
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -127,6 +127,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 1752. Check if Array Is Sorted and Rotated.py
   - 238. Product of Array Except Self.py
   - 2073. Time Needed to Buy Tickets.py
+  - 48. Rotate Image.py
   - 189. Rotate Array.py
   - 152. Maximum Product Subarray.py
 ### **sorting**
