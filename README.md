@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 143
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 144
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -154,6 +154,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
     - 103. Binary Tree Zigzag Level Order Traversal.py
     - 994. Rotting Oranges.py
     - 200. Number of Islands.py
+  - 269. Alien Dictionary.py
   - 210.CourseScheduleII.py
   - 733. Flood Fill.py
   - 207.CourseSchedule.py
