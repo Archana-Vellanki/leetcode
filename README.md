@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 144
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 145
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -104,6 +104,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 71. Simplify Path.py
   - 739. Daily Temperatures.py
 ### **Intervals**
+  - 57. Insert Interval.py
   - 435. Non-overlapping Intervals.py
   - 56. Merge Intervals.py
 ### **Arrays**
