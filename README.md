@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 148
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 149
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -150,6 +150,8 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 904. Fruit Into Baskets.py
   - 713. Subarray Product Less Than K.py
   - 424. Longest Repeating Character Replacement.py
+### **Math**
+  - 2843. Count Symmetric Integers.py
 ### **graphs**
   - 695. Max Area of Island.py
 ###   **BFS**
