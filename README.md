@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 147
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 148
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -59,6 +59,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 22. Generate Parentheses.py
   - 28. Find the Index of the First Occurrence in a String.py
   - 844. Backspace String Compare.py
+  - 249. Group Shifted Strings.py
   - 443. String Compression.py
   - 567. Permutation in String.py
   - 49. Group Anagrams.py
