@@ -6,7 +6,7 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 
     This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 149
+    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 150
 
 ### **Two pointers Technique**
   - 283. Move Zeroes.java
@@ -175,5 +175,6 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
   - 35. Search Insert Position.py
   - 875. Koko Eating Bananas.java
 ### **Prefix_Sum**
+  - 523. Continuous Subarray Sum.py
   - 560. Subarray Sum Equals K.py
   - 525. Contiguous Array.py
