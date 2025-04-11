@@ -175,3 +175,4 @@ Welcome to my LeetCode problem solutions repository! Here, you'll find my soluti
 ### **Prefix_Sum**
   - 560. Subarray Sum Equals K.py
   - 525. Contiguous Array.py
+### **Math**
