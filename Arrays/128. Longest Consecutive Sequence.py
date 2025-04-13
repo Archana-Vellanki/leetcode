@@ -30,7 +30,7 @@
 # -109 <= nums[i] <= 109
 
 
-
+# --------------------------------------------------------------------------------------
 # Intuition:
     # Convert the list to a hash set for constant-time lookups. For each number, expand downward and upward to find its consecutive sequence, removing numbers as they're encountered to avoid duplicates.
 
@@ -50,6 +50,7 @@
 # Time Complexity: O(n) – Each element is processed once.
 # Space Complexity: O(n) – The hash set stores all elements.
 
+# -------------------------------------------------------------------------------------
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         '''
