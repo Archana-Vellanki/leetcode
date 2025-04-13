@@ -29,7 +29,7 @@ def list_files_in_directory(directory=".", indent=""):
                 and item != "README.md"
             ):
                 counter += 1
-                result += f"{indent}- {item}\n"  # File
+                result += f"{indent}- `{item}`\n"  # File
     return result
 
 
