@@ -39,11 +39,39 @@ def update_readme():
     """
     header = "# LeetCode Problem Solutions\n\n"
     file_structure = list_files_in_directory()
-    introduction = f"Welcome to my LeetCode problem solutions repository! Here, you'll find my solutions to various LeetCode problems organized by category.\n\n## Introduction\n\n\
-    This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. \n\n\
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: {counter}\n\n"
-    # introduction = "This README file lists all files in the project directory.\n\n"
+    introduction = f'''# 🚀 Welcome to My LeetCode Solutions Repository!
 
+Welcome to my LeetCode problem solutions repository! 👋  
+Here, you'll find organized and well-commented solutions to various **LeetCode** problems, grouped by category.
+
+---
+
+## 📘 Introduction
+
+This repository is my personal collection of solutions to LeetCode problems.  
+Each solution is categorized into topics like:
+
+- 🧠 **Dynamic Programming**
+- 🔤 **Strings**
+- 🔢 **Arrays**
+- 🛠️ **Heaps**
+- 🧮 **Math**
+- 🧭 **Greedy Algorithms**
+- ...and many more!
+
+I hope these solutions serve as a helpful resource on your journey. 😊
+
+---
+
+## ✅ Progress
+
+**Number of problems solved till now:** `{counter}` 🎯
+
+---
+
+Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻✨
+'''
+    
     with open("README.md", "w") as readme_file:
         readme_file.write(header)
         readme_file.write(introduction)
