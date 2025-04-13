@@ -1,13 +1,36 @@
 # LeetCode Problem Solutions
 
-Welcome to my LeetCode problem solutions repository! Here, you'll find my solutions to various LeetCode problems organized by category.
+# 🚀 Welcome to My LeetCode Solutions Repository!
 
-## Introduction
+Welcome to my LeetCode problem solutions repository! 👋  
+Here, you'll find organized and well-commented solutions to various **LeetCode** problems, grouped by category.
 
-    This repository contains my solutions to LeetCode problems. Each problem solution is organized into specific categories such as Dynamic Programming, Strings, Arrays, Heaps, etc. 
+---
 
-    Feel free to explore the solutions, and I hope you find them helpful in your learning journey! Number of problems solved till now: 152
+## 📘 Introduction
 
+This repository is my personal collection of solutions to LeetCode problems.  
+Each solution is categorized into topics like:
+
+- 🧠 **Dynamic Programming**
+- 🔤 **Strings**
+- 🔢 **Arrays**
+- 🛠️ **Heaps**
+- 🧮 **Math**
+- 🧭 **Greedy Algorithms**
+- ...and many more!
+
+I hope these solutions serve as a helpful resource on your journey. 😊
+
+---
+
+## ✅ Progress
+
+**Number of problems solved till now:** `152` 🎯
+
+---
+
+Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻✨
 ### **Two pointers Technique**
   - `283. Move Zeroes.java`
   - `141. Linked List Cycle.py`
