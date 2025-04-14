@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `152` 🎯
+**Number of problems solved till now:** `153` 🎯
 
 ---
 
@@ -126,6 +126,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
 ### **stack**
   - `1249. Minimum Remove to Make Valid Parentheses.py`
   - `71. Simplify Path.py`
+  - `636. Exclusive Time of Functions.py`
   - `739. Daily Temperatures.py`
 ### **Intervals**
   - `57. Insert Interval.py`
