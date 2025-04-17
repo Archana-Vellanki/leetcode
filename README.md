@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `153` 🎯
+**Number of problems solved till now:** `154` 🎯
 
 ---
 
@@ -139,6 +139,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `1464. Maximum Product of Two Elements in an Array.java`
   - `36. Valid Sudoku.py`
   - `66. Plus One.py`
+  - `414. Third Maximum Number.py`
   - `1. Two Sum.py`
   - `75.SortColors.py`
   - `540. Single Element in a Sorted Array.py`
