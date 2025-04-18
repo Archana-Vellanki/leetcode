@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `154` 🎯
+**Number of problems solved till now:** `155` 🎯
 
 ---
 
@@ -76,6 +76,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `5. Longest Palindromic Substring.py`
   - `139.WordBreak.py`
   - `20. Valid Parentheses.py`
+  - `647. Palindromic Substrings.py`
   - `767. Reorganize String.py`
   - `2506. Count Pairs Of Similar Strings.py`
   - `67. Add Binary.py`
