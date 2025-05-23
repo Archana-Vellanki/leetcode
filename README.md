@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `157` 🎯
+**Number of problems solved till now:** `158` 🎯
 
 ---
 
@@ -141,6 +141,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `23. Merge k Sorted Lists.py`
   - `215. Kth Largest Element in an Array.py`
   - `1046. Last Stone Weight.py`
+  - `295. Find Median from Data Stream.py`
   - `703. Kth Largest Element in a Stream.java`
   - `973. K Closest Points to Origin.py`
 ### **Backtracking**
