@@ -27,6 +27,35 @@
 
 # 1 <= nums.length <= 100
 # 0 <= nums[i] <= 400
+
+
+# Time complexity: O(n)
+# Space Complexity: O(1)
+
+# Approach:
+# For each house in the range, you choose:
+# Rob it → add its money to the total from two houses ago
+# Skip it → take the total from the previous house
+
+# We only keep track of:
+# prev1 = max money up to the previous house
+# prev2 = max money up to two houses ago
+
+# if we choose to rob the current house, we will add it with prev2. if not we will just take prev.
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        l = len(nums)
+        if l == 1:
+            return nums[0]
+        prev, prev2 = nums[0], 0
+        for i in range(1,l):
+            temp = max(prev2 + nums[i], prev)
+            prev2 = prev
+            prev = temp
+        return prev
+
+
 # Time complexity: O(n)
 # Space Complexity: O(n)
 
