@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `156` 🎯
+**Number of problems solved till now:** `157` 🎯
 
 ---
 
@@ -61,6 +61,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `322. Coin Change.py`
   - `300. Longest Increasing Subsequence.py`
   - `70. ClimbingStairs.py`
+  - `213. House Robber II.py`
   - `1143. Longest Common Subsequence.py`
   - `746. Min Cost Climbing Stairs.py`
   - `62. uniquePaths.py`
