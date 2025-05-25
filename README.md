@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `159` 🎯
+**Number of problems solved till now:** `160` 🎯
 
 ---
 
@@ -92,6 +92,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
     - `103. Binary Tree Zigzag Level Order Traversal.py`
     - `200. Number of Islands.py`
     - `994. Rotting Oranges.py`
+  - `323. Number of Connected Components in an Undirected Graph.py`
 ### **Strings**
   - `67. Add Binary.py`
   - `49. Group Anagrams.py`
