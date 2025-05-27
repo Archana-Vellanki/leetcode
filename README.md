@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `161` 🎯
+**Number of problems solved till now:** `162` 🎯
 
 ---
 
@@ -126,6 +126,8 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `417. Pacific Atlantic Water Flow.py`
   - `79. Word Search.py`
   - `100. Same Tree.py`
+### **Tries**
+  - `208. Implement Trie (Prefix Tree).py`
 ### **stack**
   - `1249. Minimum Remove to Make Valid Parentheses.py`
   - `739. Daily Temperatures.py`
