@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `160` 🎯
+**Number of problems solved till now:** `161` 🎯
 
 ---
 
@@ -171,6 +171,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `145. Binary Tree Postorder Traversal.py`
   - `110. Balanced Binary Tree.py`
   - `450. Delete Node in a BST.java`
+  - `572. Subtree of Another Tree.py`
   - `94.Binary Tree Inorder Traversal.py`
   - `230. Kth Smallest Element in a BST.py`
   - `101.SymmetricTree.py`
