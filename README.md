@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `162` 🎯
+**Number of problems solved till now:** `163` 🎯
 
 ---
 
@@ -128,6 +128,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `100. Same Tree.py`
 ### **Tries**
   - `208. Implement Trie (Prefix Tree).py`
+  - `211. Design Add and Search Words Data Structure.py`
 ### **stack**
   - `1249. Minimum Remove to Make Valid Parentheses.py`
   - `739. Daily Temperatures.py`
