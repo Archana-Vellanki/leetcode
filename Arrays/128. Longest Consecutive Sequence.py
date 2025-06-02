@@ -29,7 +29,27 @@
 # 0 <= nums.length <= 105
 # -109 <= nums[i] <= 109
 
+# Key Intuition:
+# Put all numbers in a set for O(1) lookup.
+# For each number, only start counting if it is the start of a sequence (i.e., num - 1 is not in the set).
+# Expand forward (num + 1, num + 2, ...) as long as those numbers are in the set.
 
+
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        num_set = set(nums)
+        longest = 0
+        for n in num_set:
+            if n-1 not in num_set:
+                # prev is already present
+                i = n
+                length = 1
+                while i+1 in num_set:
+                    length += 1
+                    i += 1
+                longest = max(longest, length)
+        return longest
+     
 # --------------------------------------------------------------------------------------
 # Intuition:
     # Convert the list to a hash set for constant-time lookups. For each number, expand downward and upward to find its consecutive sequence, removing numbers as they're encountered to avoid duplicates.
