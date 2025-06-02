@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `166` 🎯
+**Number of problems solved till now:** `167` 🎯
 
 ---
 
@@ -204,6 +204,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `27.Remove Element.py`
 ### **Greedy**
   - `846. Hand of Straights.py`
+  - `1306. Jump Game III.py`
   - `860. Lemonade Change.py`
   - `45. Jump Game II.py`
   - `55. Jump Game.py`
