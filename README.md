@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `165` 🎯
+**Number of problems solved till now:** `166` 🎯
 
 ---
 
@@ -205,6 +205,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
 ### **Greedy**
   - `846. Hand of Straights.py`
   - `860. Lemonade Change.py`
+  - `45. Jump Game II.py`
   - `55. Jump Game.py`
   - `402. Remove K Digits.py`
 ### **Binary Search**
