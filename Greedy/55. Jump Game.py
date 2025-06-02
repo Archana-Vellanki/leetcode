@@ -27,6 +27,21 @@
 # Time complexity: O(n)
 # Space complexity: O(1)
 
+# Approach:
+# farthest keeps track of the furthest index you can reach.
+# If at any index i, you find that i > farthest, it means you’re stuck — return False.
+# Otherwise, keep updating farthest as max(farthest, i + nums[i]).
+# If the loop completes, it means the last index is reachable.
+
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        farthest = 0
+        for i in range(len(nums)):
+            if i > farthest:
+                return False
+            farthest = max(farthest, i+nums[i])
+        return True
+        
 # Approach: 
 # Greedy Solution:
 # The intuition behind this solution is that it iterates over the array in reverse order, 
