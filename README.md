@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `168` 🎯
+**Number of problems solved till now:** `169` 🎯
 
 ---
 
@@ -181,6 +181,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `94.Binary Tree Inorder Traversal.py`
   - `230. Kth Smallest Element in a BST.py`
   - `101.SymmetricTree.py`
+  - `236. Lowest Common Ancestor of a Binary Tree.py`
 ### **Math**
   - `2843. Count Symmetric Integers.py`
   - `1922. Count Good Numbers.py`
