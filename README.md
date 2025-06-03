@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `167` 🎯
+**Number of problems solved till now:** `168` 🎯
 
 ---
 
@@ -69,6 +69,7 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `198. House Robber.py`
 ### **LinkedList**
   - `876. Middle of the Linked List.py`
+  - `138. Copy List with Random Pointer.py`
   - `141. Linked List Cycle.java`
   - `146. LRU Cache.py`
   - `21. Merge Two Sorted Lists.java`
