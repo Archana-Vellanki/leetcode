@@ -26,7 +26,7 @@ I hope these solutions serve as a helpful resource on your journey. 😊
 
 ## ✅ Progress
 
-**Number of problems solved till now:** `169` 🎯
+**Number of problems solved till now:** `170` 🎯
 
 ---
 
@@ -160,6 +160,8 @@ Feel free to ⭐ star the repository if you find it helpful. Happy coding! 💻�
   - `90. Subsets II.py`
   - `90. Subsets II.java`
   - `39. Combination Sum.java`
+### **Design**
+  - `362. Design Hit Counter.py`
 ### **Prefix_Sum**
   - `560. Subarray Sum Equals K.py`
   - `525. Contiguous Array.py`
